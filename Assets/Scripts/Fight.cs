@@ -16,6 +16,15 @@ public class Fight : MonoBehaviour
 	void Start()
 	{
 		//chargement du sprite
+		Rend = GetComponent<SpriteRenderer> ();
+	}
+
+	void Update()
+	{		
+		if (gameObject.GetComponent<Stats>().m_life <= 0 && gameObject.tag != "Sword") 
+		{		
+			Destroy(gameObject);
+		}
 	}
 
 	void OnCollisionStay2D (Collision2D other)
@@ -57,7 +66,7 @@ public class Fight : MonoBehaviour
 		{
 			//TODO			
 			StopAllCoroutines();			
-			Destroy(gameObject);
+			Destroy(gameObject,0.2f);
 		}
 	}
 
@@ -70,10 +79,12 @@ public class Fight : MonoBehaviour
 			yield return new WaitForSeconds(m_delay);
 
 			//animation clignote
+			Rend.enabled = false;
 
 			yield return new WaitForSeconds(m_delay);
 
 			//animation clignote
+			Rend.enabled = true;
 
 			yield return new WaitForSeconds(m_delay);
 		}
@@ -86,5 +97,6 @@ public class Fight : MonoBehaviour
 	#region Private Variable
 	//Material material;
 	Rigidbody2D OtherRB;
+	SpriteRenderer Rend;
 	#endregion
 }

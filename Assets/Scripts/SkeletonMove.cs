@@ -20,17 +20,24 @@ public class SkeletonMove : MonoBehaviour
 
 	void Update()
 	{	
-		//Déplacement vers le Player
-		if (Vector2.Distance(transform.position,target.position)<8.0f)
+		try 
+		{			
+			//Déplacement vers le Player
+			if (Vector2.Distance(transform.position,target.position)<8.0f)
+			{
+				transform.position = Vector2.MoveTowards(transform.position,target.position,speed * Time.deltaTime);
+			}
+		} 
+
+		catch (System.Exception ex) 
 		{
-			transform.position = Vector2.MoveTowards(transform.position,target.position,speed * Time.deltaTime);
+			
 		}
 	}
 
 	void OnGUI()
-	{
-		
-		GUILayout.Button ( target.transform.position + ""); 
+	{		
+		//GUILayout.Button ( target.transform.position + ""); 
 	}
 	#endregion
 }

@@ -27,8 +27,16 @@ public class LifeBar : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		m_life = target.GetComponent<Stats> ().m_life;
-		GetComponent<SpriteRenderer>().sprite = m_lifeIcon[m_life];
+		try 
+		{
+			m_life = target.GetComponent<Stats> ().m_life;
+			GetComponent<SpriteRenderer>().sprite = m_lifeIcon[m_life];			
+		} 
+
+		catch (System.Exception ex) 
+		{
+			
+		}
 
 	}
 	#endregion
