@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: a5fa0d28321219343a3e0caa040b76bf
+timeCreated: 1448463765
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CornerUpLeft
+    21300002: CornerUpRight
+    21300004: CornerDownLeft
+    21300006: CornerDownRight
+    21300008: WallUp
+    21300010: WallDown
+    21300012: DoorUp
+    21300014: DoorDown
+    21300016: Tile
+    21300018: SmallTile
+    21300020: DoorRight
+    21300022: WallLeft
+    21300024: WallRight
+    21300026: DoorLeft
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CornerUpLeft
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CornerUpRight
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 418
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CornerDownLeft
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 322
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CornerDownRight
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 322
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WallUp
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 418
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WallDown
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 418
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DoorUp
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 226
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DoorDown
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 226
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tile
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 258
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SmallTile
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 226
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DoorRight
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 162
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WallLeft
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 163
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: WallRight
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 98
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DoorLeft
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
