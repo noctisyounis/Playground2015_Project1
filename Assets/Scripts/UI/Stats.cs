@@ -40,8 +40,8 @@ public class Stats : MonoBehaviour
 			if (m_life > 0) {
 				m_isDead = false;
 			
-				if (m_life > 3) {
-					m_life = 3;
+				if (m_life > m_lifeMax) {
+				m_life = m_lifeMax;
 				}
 			}
 	}

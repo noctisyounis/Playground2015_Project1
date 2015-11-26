@@ -48,7 +48,7 @@ public class PlayerAttack : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Space)) 
 		{
-			RB.constraints = RigidbodyConstraints2D.FreezePosition;
+			RB.constraints = RigidbodyConstraints2D.FreezeAll;
 
 			SwordClone = Instantiate (m_swordPrefab, SwordDirection, SwordRotation) as GameObject;
 			Destroy(SwordClone,0.3f);

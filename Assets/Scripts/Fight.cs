@@ -65,7 +65,7 @@ public class Fight : MonoBehaviour
 		if (gameObject.GetComponent<Stats>().m_life <= 0 && gameObject.tag != "Sword") 
 		{
 			//TODO			
-			StopAllCoroutines();			
+			StopAllCoroutines();
 			Destroy(gameObject,0.2f);
 		}
 	}
