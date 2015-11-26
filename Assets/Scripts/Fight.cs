@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
 [RequireComponent (typeof (Stats))]
 public class Fight : MonoBehaviour 
 {
@@ -67,6 +68,7 @@ public class Fight : MonoBehaviour
 			//TODO			
 			StopAllCoroutines();
 			Destroy(gameObject,0.2f);
+			Application.LoadLevel("GameOver");
 		}
 	}
 
