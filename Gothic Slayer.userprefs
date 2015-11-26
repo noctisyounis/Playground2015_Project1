@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Gothic Slayer\Assets\Scripts\GenerateRoom.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WeaponDamage.cs">
     <Files>
-      <File FileName="..\..\Gothic Slayer\Assets\Scripts\GenerateRoom.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerAttack.cs" Line="83" Column="5" />
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Fight.cs" Line="33" Column="45" />
+      <File FileName="Assets\Scripts\WeaponDamage.cs" Line="4" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

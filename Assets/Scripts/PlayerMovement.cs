@@ -5,8 +5,11 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float m_speed = 5.0f;
-    public string m_axisV = "Vertical";
-    public string m_axisH = "Horizontal";
+    public string m_axisVString = "Vertical";
+	public string m_axisHString = "Horizontal";
+	public float m_axisH;
+	public float m_axisV;
+
 
     void Start()
     {
@@ -15,11 +18,12 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        float axisH = Input.GetAxisRaw(m_axisH);
-        float axisV = Input.GetAxisRaw(m_axisV);
-        m_RB.velocity = new Vector2(axisH, axisV) * m_speed;
+		m_axisH = Input.GetAxisRaw(m_axisHString);
+		m_axisV = Input.GetAxisRaw(m_axisVString);
+		m_RB.velocity = new Vector2(m_axisH, m_axisV) * m_speed;
 
     }
 
-    private Rigidbody2D m_RB;
+    Rigidbody2D m_RB;
 }
+
