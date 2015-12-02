@@ -4,6 +4,7 @@ using System.Collections;
 public class Stats : MonoBehaviour 
 {
 	#region Properties
+
 	public int m_lifeMax = 3;
 	public int m_life;
 	public bool m_isDead = false;

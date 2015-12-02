@@ -5,7 +5,7 @@ public class ChangeRoomTrigger : MonoBehaviour {
 
     #region Public Variables
 
-
+    //Les transform sont initialiser quand on cree le trigger dans le generateur de level.
     public Transform m_firstRoom;
     public Transform m_secondRoom;
     public GameObject m_player;
@@ -67,12 +67,12 @@ public class ChangeRoomTrigger : MonoBehaviour {
         //Placer le player plus loin que le trigger
         if(m_firstRoom.position.x < m_secondRoom.position.x)
         {
-            m_player.transform.position = new Vector3(m_secondRoom.position.x - 17, m_player.transform.position.y, -1);
+            m_player.transform.position = new Vector3(m_secondRoom.position.x - 17, m_player.transform.position.y, 0);
         }
 
         if(m_firstRoom.position.y > m_secondRoom.position.y)
         {
-            m_player.transform.position = new Vector3(m_player.transform.position.x, m_secondRoom.position.y + 12, -1);
+            m_player.transform.position = new Vector3(m_player.transform.position.x, m_secondRoom.position.y + 12, 0);
         }
 
         // Recentrer la camera au milieu de l'ecran.
@@ -86,7 +86,7 @@ public class ChangeRoomTrigger : MonoBehaviour {
             m_camera.transform.position = m_secondRoom.transform.position;
         }
 
-        //Mettre le bool a false pour arreter de boujger la camera.
+        //Mettre le bool a false pour arreter de bouger la camera.
         if (m_camera.transform.position == m_secondRoom.position)
         {
             m_cameraCanMoveAtoB = false;
@@ -100,12 +100,12 @@ public class ChangeRoomTrigger : MonoBehaviour {
 
         if(m_secondRoom.position.x > m_firstRoom.position.x)
         {
-            m_player.transform.position = new Vector3(m_firstRoom.position.x + 17, m_player.transform.position.y, -1);
+            m_player.transform.position = new Vector3(m_firstRoom.position.x + 17, m_player.transform.position.y, 0);
         }
 
         if (m_secondRoom.position.y < m_firstRoom.position.y)
         {
-            m_player.transform.position = new Vector3(m_player.transform.position.x, m_firstRoom.position.y - 12, -1);
+            m_player.transform.position = new Vector3(m_player.transform.position.x, m_firstRoom.position.y - 12, 0);
         }
 
         if (m_camera.transform.position.x - m_firstRoom.transform.position.x < 0.1f && m_camera.transform.position.x - m_firstRoom.transform.position.x > 0)

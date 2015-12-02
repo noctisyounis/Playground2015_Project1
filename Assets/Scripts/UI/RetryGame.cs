@@ -7,14 +7,14 @@ public class RetryGame : MonoBehaviour
 	#endregion
 
 	#region Methods
-	public void LaunchStart()
+	public void LaunchStart() // quit
 	{
 		Application.LoadLevel("StartScene");
 	}
 
-	public void LaunchGame()
+	public void LaunchGame() //retry
 	{
-		Application.LoadLevel("DemoScene");
+		Application.LoadLevel("1");
 	}
 	#endregion
 

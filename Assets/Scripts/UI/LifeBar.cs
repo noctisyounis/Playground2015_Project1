@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (Stats))]
 public class LifeBar : MonoBehaviour 
 
 {
 	#region Properties
 
 	public Sprite[] m_lifeIcon = new Sprite[4];
-	public int m_life;
-	public GameObject target;
+    public GameObject target;
+
+    private Stats m_playerStats;
+    private int m_life;
+    private SpriteRenderer m_spriteRenderer;
 
 
 	#endregion
@@ -20,27 +22,17 @@ public class LifeBar : MonoBehaviour
 	void Start()
 	{
 		target = GameObject.FindGameObjectWithTag("Player");
-
-		m_life = target.GetComponent<Stats> ().m_life;
-	}
+        m_spriteRenderer = GetComponent<SpriteRenderer>();
+        m_playerStats = target.GetComponent<Stats> ();
+        m_life = m_playerStats.m_life;
+    }
 
 	// Update is called once per frame
 	void Update () 
 	{
-		try 
-		{
-			m_life = target.GetComponent<Stats> ().m_life;
-			GetComponent<SpriteRenderer>().sprite = m_lifeIcon[m_life];			
-		} 
-
-		catch (System.Exception ex) 
-		{
-			
-		}
-
+		m_life = m_playerStats.m_life;
+        m_spriteRenderer.sprite = m_lifeIcon[m_life];			
 	}
 	#endregion
 
-	#region Private Properties
-	#endregion
 }

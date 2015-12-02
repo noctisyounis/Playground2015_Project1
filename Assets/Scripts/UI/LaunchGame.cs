@@ -7,7 +7,7 @@ public class LaunchGame : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Space)) 
 		{
-			Application.LoadLevel("DemoScene");
+			Application.LoadLevel("1");
 		}
 	}
 }

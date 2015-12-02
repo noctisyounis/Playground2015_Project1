@@ -4,20 +4,18 @@ using UnityEditor;
 [RequireComponent (typeof (Stats))]
 public class Fight : MonoBehaviour 
 {
-	#region Public variables
 	public float m_delay = 0.1f;
 	public bool m_isTouch = false;
-
 	public GameObject target;
-	#endregion
 
-//-----------------------------------------------------------
+    private SpriteRenderer m_spriteRenderer;
 
-	#region Methods
-	void Start()
+    #region Methods
+
+    void Start()
 	{
-		//chargement du sprite
-		Rend = GetComponent<SpriteRenderer> ();
+        //chargement du sprite
+        m_spriteRenderer = GetComponent<SpriteRenderer> ();
 	}
 
 	void Update()
@@ -34,40 +32,35 @@ public class Fight : MonoBehaviour
 		{
 			if (transform.position.x <= other.transform.position.x) 
 			{
-				print("x < E");
 				transform.Translate(Vector2.left);
 			}
 
 			else if(transform.position.x >= other.transform.position.x)
 			{
-				print("x > E");
 				transform.Translate(Vector2.right);
 			}
 
 			if (transform.position.y <= other.transform.position.y) 
 			{
-				print("y < E");
 				transform.Translate(Vector2.down);
 			}
 
 			else if (transform.position.y >= other.transform.position.y) 
 			{
-				print("y > E");
 				transform.Translate(Vector2.up);
 			}
 
 			//animation touche
 			gameObject.GetComponent<Stats>().m_life -= other.gameObject.GetComponent<Stats>().m_PowerDamage;
-			Debug.Log ("Il me reste " + gameObject.GetComponent<Stats>().m_life);
 			StartCoroutine(Flasher());
-			Debug.Log ("Je lance le FLASH");
+			Destroy (transform.FindChild ("Sword(Clone)"));
 		}
 
 		if (gameObject.GetComponent<Stats>().m_life <= 0 && gameObject.tag != "Sword") 
 		{
 			//TODO			
 			StopAllCoroutines();
-			Destroy(gameObject,0.2f);
+			Destroy(gameObject, 0.2f);
 			Application.LoadLevel("GameOver");
 		}
 	}
@@ -75,30 +68,22 @@ public class Fight : MonoBehaviour
 	IEnumerator Flasher()
 	{
 		m_isTouch = true;
-		Debug.Log ("test clignote");
 		for (int i = 0; i < 5; i++) 
 		{
 			yield return new WaitForSeconds(m_delay);
 
-			//animation clignote
-			Rend.enabled = false;
+            //animation clignote
+            m_spriteRenderer.enabled = false;
 
 			yield return new WaitForSeconds(m_delay);
 
-			//animation clignote
-			Rend.enabled = true;
+            //animation clignote
+            m_spriteRenderer.enabled = true;
 
 			yield return new WaitForSeconds(m_delay);
 		}
 		m_isTouch = false;
 	}
-	#endregion
 
-//-----------------------------------------------------------
-
-	#region Private Variable
-	//Material material;
-	Rigidbody2D OtherRB;
-	SpriteRenderer Rend;
 	#endregion
 }
